@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<!-- 引入head公用内容 -->
+<head th:include="common/header :: commonHead"></head>
+<body>
+<div class="dashboard-main-wrapper">
+    <!-- navbar -->
+    <div th:replace="common/templates :: dashboardHeader"></div>
+    <!-- left sidebar -->
+    <div th:replace="common/templates :: navLeftSidebar"></div>
+    <!-- wrapper  -->
+    <div class="dashboard-wrapper">
+        <div class="dashboard-ecommerce">
+            <div class="container-fluid dashboard-content ">
+                <!-- pageheader  -->
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div class="page-header"><h2 class="pageheader-title">XXX项目</h2>
+                            <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus vel mauris facilisis faucibus at enim quis massa lobortis rutrum.</p>
+                            <!--<div class="page-breadcrumb">
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">E-Commerce Dashboard Template</li>
+                                    </ol>
+                                </nav>
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+                <!-- end pageheader  -->
+                <!-- ============================================================== -->
+                <div class="ecommerce-widget">
+
+                    <div class="row">
+
+                        <div class="col-xl-10 col-lg-12 col-md-6 col-sm-12 col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3 class="card-title border-bottom pb-2"></h3>
+                                    <img style="width: 100%;" src="/objects/xm-img1.png" alt="项目图片" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
