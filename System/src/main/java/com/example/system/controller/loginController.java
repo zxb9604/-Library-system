@@ -56,8 +56,8 @@ public class loginController {
      * 登录
      */
     @PostMapping("/login")
+    @ResponseBody
     public String login(String userName, String passWord, String psStatus) {
-        int userId;
         UserEntity user = userDao.findByUserNameAndPassWord(userName, passWord);
         if (user != null) {
             user.setPsStatus(psStatus);
@@ -65,10 +65,25 @@ public class loginController {
             if (userEntity != null) {
                 return ResMesUtil.build().success();
             }
-            // userId = user.getId();
-            //String s = userDao.updatepsStatus(userId, psStatus);
-
         }
         return ResMesUtil.build().resMesFail("用户名或密码不正确！");
+    }
+
+    /**
+     * 验证用户名
+     */
+    @PostMapping("/checkUsername")
+    @ResponseBody
+    public String checkUsername(String username) {
+        UserEntity byUserName = userDao.findByUserName(username);
+        if (byUserName == null) {
+            return ResMesUtil.build().resMesFail("用户名不存在，请先注册！");
+        }
+        String psStatus = byUserName.getPsStatus();
+        if (psStatus.equals("1")) {
+            return ResMesUtil.build().resMesSuccess(byUserName.getPassWord());
+        } else {
+            return ResMesUtil.build().resMesSuccess(psStatus);
+        }
     }
 }

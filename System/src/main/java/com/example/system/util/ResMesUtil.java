@@ -19,12 +19,19 @@ public class ResMesUtil extends HashMap<Object,Object> {
     public String success() {
         return resMes(MES_SUCC, CODE_SUCC);
     }
+
     public String fail() {
         return resMes(MES_FAIL, CODE_FAIL);
     }
+
     public String resMesFail(String mes) {
         return resMes(mes, CODE_FAIL);
     }
+
+    public String resMesSuccess(String mes) {
+        return resMes(mes, CODE_SUCC);
+    }
+
     private String resMes(String mes, int code) {
         this.put("mes", mes);
         this.put("code", code);
