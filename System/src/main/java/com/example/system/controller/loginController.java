@@ -75,4 +75,22 @@ public class loginController {
         }
         return ResMesUtil.build().resMesFail("用户名或密码不正确！");
     }
+
+    /**
+     * 验证用户名
+     */
+    @PostMapping("/checkUsername")
+    @ResponseBody
+    public String checkUsername(String username) {
+        UserEntity byUserName = userDao.findByUserName(username);
+        if (byUserName == null) {
+            return ResMesUtil.build().resMesFail("用户名不存在，请先注册！");
+        }
+        String psStatus = byUserName.getPsStatus();
+        if (psStatus.equals("1")) {
+            return ResMesUtil.build().resMesSuccess(byUserName.getPassWord());
+        } else {
+            return ResMesUtil.build().resMesSuccess(psStatus);
+        }
+    }
 }

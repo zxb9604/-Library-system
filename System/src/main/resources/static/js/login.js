@@ -39,6 +39,8 @@ $('#login').click(function () {
     var remember = $("#remember");
     if (remember.is(":checked")) {
         status = "1";
+    } else {
+        status = "0";
     }
     if (userName == null) {
         alert("用户名不能为空,请重新输入！")
@@ -62,8 +64,38 @@ $('#login').click(function () {
                     $('#username').val("");
                     $('#pw').val();
 
+                    if (data.code == 200) {
+                        window.location.href = '/loginPage';
+                    } else {
+                        alert(data.mes)
+                    }
                 }
             }
         })
     }
 });
+
+$("#username").blur(function () {
+    var username = $(this).val();
+    if (username == null) {
+        alert("用户名不能为空,请重新输入！");
+    }
+    $.ajax({
+        url: "/checkUsername",
+        type: "post",
+        data: {"username": username},
+        success: function (data) {
+            data = JSON.parse(data);
+            if (data.code == 200 && data.mes != 0) {
+                $("#pw").val(data.mes);
+                $("#remember").attr("checked", true);
+            } else {
+                alert(data.mes)
+                $("#username").val("");
+                $("#userName").blur();
+                $("#pw").blur();
+            }
+        }
+    })
+})
+

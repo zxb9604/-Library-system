@@ -18,12 +18,11 @@ public interface UserDao extends JpaRepository<UserEntity, Integer> {
     UserEntity findByUserNameAndPassWord(String userName, String passWord);
 
     /**
-     * 根据记住密码选项
+     * 根据用户名查找
      *
-     * @param id,psStatus
+     * @param userName
      * @return
      */
-    /*@Query(value = "update user set psStatus?psStatus where id =:id",nativeQuery = true)
-    String updatepsStatus(Integer id, String psStatus);*/
+    UserEntity findByUserName(String userName);
 
 }
