@@ -22,7 +22,7 @@ $('#login').click(function() {
         success: function (data) {
             data=JSON.parse(data);
             if(data.code === 200)
-                window.location.href='/';
+                window.location.href='/jump/index';
             else if(data.code === 400) {
                 alert(data.mes);
                 $('#userName').val("");

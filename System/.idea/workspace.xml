@@ -20,39 +20,61 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ea6a129d-c28b-4e2c-ab12-945d47eab6f1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/system/controller/loginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/system/dao/UserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/system/entity/UserEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/system/util/ResMesUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/ace-ie.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/ace-part2.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/ace-rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/ace.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/fonts.googleapis.com.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome/4.5.0/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome/4.5.0/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome/4.5.0/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome/4.5.0/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome/4.5.0/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome/4.5.0/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/html5shiv.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/jquery.mobile.custom.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/respond.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/jm.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/jm1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/login/avatar-0.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/login/user.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/jquery/jquery-1.11.3.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/jquery/jquery-2.1.4.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/common/header.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/common/templates.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/loginPage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/system/controller/jumpController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/ace-skins.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/bootstrap-colorpicker.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/bootstrap-datepicker3.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/bootstrap-datetimepicker.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/bootstrap-duallistbox.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/bootstrap-editable.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/bootstrap-multiselect.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/bootstrap-timepicker.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/chosen.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/colorbox.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/daterangepicker.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/dropzone.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/fullcalendar.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/jquery-ui.custom.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/jquery-ui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/jquery.gritter.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/prettify.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/select2.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/ui.jqgrid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/ace-elements.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/ace-extra.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/ace.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/excanvas.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/avatars/avatar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/avatars/avatar1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/avatars/avatar2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/avatars/avatar3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/avatars/avatar4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/avatars/avatar5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/avatars/profile-pic.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/avatars/user.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/jquery/jquery-ui.custom.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/jquery/jquery.easypiechart.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/jquery/jquery.flot.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/jquery/jquery.flot.pie.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/jquery/jquery.flot.resize.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/jquery/jquery.mobile.custom.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/jquery/jquery.sparkline.index.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/jquery/jquery.ui.touch-punch.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/system/controller/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/system/controller/loginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/css/fonts.googleapis.com.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/fonts.googleapis.com.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/login/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/login/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/system/controller/loginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/system/controller/loginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/css/fonts.googleapis.com.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/assets/css/fonts.googleapis.com.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/login/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/login/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,8 +86,8 @@
       <list>
         <option value="HTML File" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -97,7 +119,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/assets/js" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -107,19 +129,19 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.example.system.dao" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\GitHub\Library-system\System\src\main\resources\static\images\login" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GitHub\Library-system\System\src\main\resources\static\assets\js" />
+      <recent name="D:\GitHub\Library-system\System\src\main\resources\static\jquery" />
       <recent name="D:\GitHub\Library-system\System\src\main\resources\static\images" />
+      <recent name="D:\GitHub\Library-system\System\src\main\resources\static\assets\css" />
+      <recent name="D:\GitHub\Library-system\System\src\main\resources\templates" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GitHub\Library-system\System\src\main\resources\static\images\login" />
       <recent name="D:\GitHub\Library-system\System\src\main\resources\static\images" />
-      <recent name="D:\GitHub\Library-system\System\src\main\resources\static\bootstrap\js" />
-      <recent name="D:\GitHub\Library-system\System\src\main\resources\static\bootstrap\css" />
-      <recent name="D:\GitHub\Library-system\System\src\main\resources\static\assets" />
-      <recent name="D:\GitHub\Library-system\System\src\main\resources\static\jquery" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.SystemApplication">
@@ -156,7 +178,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1611806228583</updated>
-      <workItem from="1611806232426" duration="46975000" />
+      <workItem from="1611806232426" duration="47332000" />
+      <workItem from="1612140874770" duration="15096000" />
     </task>
     <servers />
   </component>
@@ -173,60 +196,61 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1180" y="249" key="FileChooserDialogImpl" timestamp="1611806281899">
       <screen x="-1920" y="-25" width="1920" height="1040" />
     </state>
     <state x="-1180" y="249" key="FileChooserDialogImpl/0.0.1680.1010/-1920.-25.1920.1040@-1920.-25.1920.1040" timestamp="1611806281899" />
-    <state width="1877" height="276" key="GridCell.Tab.0.bottom" timestamp="1611914058606">
+    <state width="1877" height="319" key="GridCell.Tab.0.bottom" timestamp="1612170918582">
       <screen x="-1920" y="-25" width="1920" height="1040" />
     </state>
-    <state width="1877" height="276" key="GridCell.Tab.0.bottom/0.0.1680.1010/-1920.-25.1920.1040@-1920.-25.1920.1040" timestamp="1611914058606" />
-    <state width="1877" height="276" key="GridCell.Tab.0.center" timestamp="1611914058606">
+    <state width="1877" height="319" key="GridCell.Tab.0.bottom/0.0.1680.1010/-1920.-25.1920.1040@-1920.-25.1920.1040" timestamp="1612170918582" />
+    <state width="1877" height="319" key="GridCell.Tab.0.center" timestamp="1612170918582">
       <screen x="-1920" y="-25" width="1920" height="1040" />
     </state>
-    <state width="1877" height="276" key="GridCell.Tab.0.center/0.0.1680.1010/-1920.-25.1920.1040@-1920.-25.1920.1040" timestamp="1611914058606" />
-    <state width="1877" height="276" key="GridCell.Tab.0.left" timestamp="1611914058606">
+    <state width="1877" height="319" key="GridCell.Tab.0.center/0.0.1680.1010/-1920.-25.1920.1040@-1920.-25.1920.1040" timestamp="1612170918582" />
+    <state width="1877" height="319" key="GridCell.Tab.0.left" timestamp="1612170918581">
       <screen x="-1920" y="-25" width="1920" height="1040" />
     </state>
-    <state width="1877" height="276" key="GridCell.Tab.0.left/0.0.1680.1010/-1920.-25.1920.1040@-1920.-25.1920.1040" timestamp="1611914058606" />
-    <state width="1877" height="276" key="GridCell.Tab.0.right" timestamp="1611914058606">
+    <state width="1877" height="319" key="GridCell.Tab.0.left/0.0.1680.1010/-1920.-25.1920.1040@-1920.-25.1920.1040" timestamp="1612170918581" />
+    <state width="1877" height="319" key="GridCell.Tab.0.right" timestamp="1612170918582">
       <screen x="-1920" y="-25" width="1920" height="1040" />
     </state>
-    <state width="1877" height="276" key="GridCell.Tab.0.right/0.0.1680.1010/-1920.-25.1920.1040@-1920.-25.1920.1040" timestamp="1611914058606" />
-    <state width="1877" height="276" key="GridCell.Tab.1.bottom" timestamp="1611914058606">
+    <state width="1877" height="319" key="GridCell.Tab.0.right/0.0.1680.1010/-1920.-25.1920.1040@-1920.-25.1920.1040" timestamp="1612170918582" />
+    <state width="1877" height="319" key="GridCell.Tab.1.bottom" timestamp="1612170918378">
       <screen x="-1920" y="-25" width="1920" height="1040" />
     </state>
-    <state width="1877" height="276" key="GridCell.Tab.1.bottom/0.0.1680.1010/-1920.-25.1920.1040@-1920.-25.1920.1040" timestamp="1611914058606" />
-    <state width="1877" height="276" key="GridCell.Tab.1.center" timestamp="1611914058606">
+    <state width="1877" height="319" key="GridCell.Tab.1.bottom/0.0.1680.1010/-1920.-25.1920.1040@-1920.-25.1920.1040" timestamp="1612170918378" />
+    <state width="1877" height="319" key="GridCell.Tab.1.center" timestamp="1612170918378">
       <screen x="-1920" y="-25" width="1920" height="1040" />
     </state>
-    <state width="1877" height="276" key="GridCell.Tab.1.center/0.0.1680.1010/-1920.-25.1920.1040@-1920.-25.1920.1040" timestamp="1611914058606" />
-    <state width="1877" height="276" key="GridCell.Tab.1.left" timestamp="1611914058606">
+    <state width="1877" height="319" key="GridCell.Tab.1.center/0.0.1680.1010/-1920.-25.1920.1040@-1920.-25.1920.1040" timestamp="1612170918378" />
+    <state width="1877" height="319" key="GridCell.Tab.1.left" timestamp="1612170918378">
       <screen x="-1920" y="-25" width="1920" height="1040" />
     </state>
-    <state width="1877" height="276" key="GridCell.Tab.1.left/0.0.1680.1010/-1920.-25.1920.1040@-1920.-25.1920.1040" timestamp="1611914058606" />
-    <state width="1877" height="276" key="GridCell.Tab.1.right" timestamp="1611914058606">
+    <state width="1877" height="319" key="GridCell.Tab.1.left/0.0.1680.1010/-1920.-25.1920.1040@-1920.-25.1920.1040" timestamp="1612170918378" />
+    <state width="1877" height="319" key="GridCell.Tab.1.right" timestamp="1612170918378">
       <screen x="-1920" y="-25" width="1920" height="1040" />
     </state>
-    <state width="1877" height="276" key="GridCell.Tab.1.right/0.0.1680.1010/-1920.-25.1920.1040@-1920.-25.1920.1040" timestamp="1611914058606" />
-    <state width="1877" height="276" key="GridCell.Tab.2.bottom" timestamp="1611914058607">
+    <state width="1877" height="319" key="GridCell.Tab.1.right/0.0.1680.1010/-1920.-25.1920.1040@-1920.-25.1920.1040" timestamp="1612170918378" />
+    <state width="1877" height="319" key="GridCell.Tab.2.bottom" timestamp="1612170918378">
       <screen x="-1920" y="-25" width="1920" height="1040" />
     </state>
-    <state width="1877" height="276" key="GridCell.Tab.2.bottom/0.0.1680.1010/-1920.-25.1920.1040@-1920.-25.1920.1040" timestamp="1611914058607" />
-    <state width="1877" height="276" key="GridCell.Tab.2.center" timestamp="1611914058606">
+    <state width="1877" height="319" key="GridCell.Tab.2.bottom/0.0.1680.1010/-1920.-25.1920.1040@-1920.-25.1920.1040" timestamp="1612170918378" />
+    <state width="1877" height="319" key="GridCell.Tab.2.center" timestamp="1612170918378">
       <screen x="-1920" y="-25" width="1920" height="1040" />
     </state>
-    <state width="1877" height="276" key="GridCell.Tab.2.center/0.0.1680.1010/-1920.-25.1920.1040@-1920.-25.1920.1040" timestamp="1611914058606" />
-    <state width="1877" height="276" key="GridCell.Tab.2.left" timestamp="1611914058606">
+    <state width="1877" height="319" key="GridCell.Tab.2.center/0.0.1680.1010/-1920.-25.1920.1040@-1920.-25.1920.1040" timestamp="1612170918378" />
+    <state width="1877" height="319" key="GridCell.Tab.2.left" timestamp="1612170918378">
       <screen x="-1920" y="-25" width="1920" height="1040" />
     </state>
-    <state width="1877" height="276" key="GridCell.Tab.2.left/0.0.1680.1010/-1920.-25.1920.1040@-1920.-25.1920.1040" timestamp="1611914058606" />
-    <state width="1877" height="276" key="GridCell.Tab.2.right" timestamp="1611914058606">
+    <state width="1877" height="319" key="GridCell.Tab.2.left/0.0.1680.1010/-1920.-25.1920.1040@-1920.-25.1920.1040" timestamp="1612170918378" />
+    <state width="1877" height="319" key="GridCell.Tab.2.right" timestamp="1612170918378">
       <screen x="-1920" y="-25" width="1920" height="1040" />
     </state>
-    <state width="1877" height="276" key="GridCell.Tab.2.right/0.0.1680.1010/-1920.-25.1920.1040@-1920.-25.1920.1040" timestamp="1611914058606" />
+    <state width="1877" height="319" key="GridCell.Tab.2.right/0.0.1680.1010/-1920.-25.1920.1040@-1920.-25.1920.1040" timestamp="1612170918378" />
     <state x="-1459" y="139" key="SettingsEditor" timestamp="1611821514205">
       <screen x="-1920" y="-25" width="1920" height="1040" />
     </state>

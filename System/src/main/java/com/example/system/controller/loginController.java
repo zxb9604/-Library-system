@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.thymeleaf.util.StringUtils;
 
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -23,8 +24,11 @@ public class loginController {
     UserDao userDao;
 
     @GetMapping("/")
-    public String login() {
-        return "login";
+    public String login(HttpSession session) {
+        if (session.getAttribute("userName") == null){
+            return "login";
+        }
+        return "index";
     }
 
     /**
@@ -56,17 +60,17 @@ public class loginController {
      * 登录
      */
     @PostMapping("/login")
-    public String login(String userName, String passWord, String psStatus) {
-        int userId;
+    @ResponseBody
+    public String login(String userName, String passWord, String psStatus, HttpSession session) {
         UserEntity user = userDao.findByUserNameAndPassWord(userName, passWord);
         if (user != null) {
+            session.setAttribute("userName",userName);
+            session.setAttribute("userType",user.getUserType());
             user.setPsStatus(psStatus);
             UserEntity userEntity = userDao.saveAndFlush(user);
             if (userEntity != null) {
                 return ResMesUtil.build().success();
             }
-            // userId = user.getId();
-            //String s = userDao.updatepsStatus(userId, psStatus);
 
         }
         return ResMesUtil.build().resMesFail("用户名或密码不正确！");

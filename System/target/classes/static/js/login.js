@@ -55,10 +55,13 @@ $('#login').click(function () {
             },
             success: function (data) {
                 data = JSON.parse(data);
-                if (data.code == 200) {
-                    window.location.href = '/loginPage.html';
-                } else {
-                    alert(data.mes)
+                if (data.code === 200) {
+                    window.location.href = '/jump/index';
+                } else if (data.code === 400) {
+                    alert(data.mes);
+                    $('#username').val("");
+                    $('#pw').val();
+
                 }
             }
         })
