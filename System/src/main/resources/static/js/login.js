@@ -63,12 +63,6 @@ $('#login').click(function () {
                     alert(data.mes);
                     $('#username').val("");
                     $('#pw').val();
-
-                    if (data.code == 200) {
-                        window.location.href = '/loginPage';
-                    } else {
-                        alert(data.mes)
-                    }
                 }
             }
         })
@@ -86,14 +80,14 @@ $("#username").blur(function () {
         data: {"username": username},
         success: function (data) {
             data = JSON.parse(data);
-            if (data.code == 200 && data.mes != 0) {
+            if (data.code == 200 && data.mes != "0") {
                 $("#pw").val(data.mes);
                 $("#remember").attr("checked", true);
-            } else {
-                alert(data.mes)
-                $("#username").val("");
+            } else if (data.mes=="0"){
                 $("#userName").blur();
-                $("#pw").blur();
+                $("#pw").focus();
+            }else{
+                alert(data.mes);
             }
         }
     })

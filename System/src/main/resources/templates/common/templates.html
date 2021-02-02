@@ -1,334 +1,421 @@
-<!-- 顶部 -->
-<div th:fragment = "dashboardHeader">
-    <div class="dashboard-header">
-        <nav class="navbar navbar-expand-lg bg-white fixed-top">
-            <a class="navbar-brand" href="/">图书管理系统</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto navbar-right-top">
-                    <li class="nav-item dropdown nav-user">
-                        <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="/images/user.jpg" alt="" class="user-avatar-md rounded-circle"></a>
-                        <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
-                            <div class="nav-user-info">
-                                <h5 class="mb-0 text-white nav-user-name">[[${session.userName}]] </h5>
-                            </div>
-                            <a class="dropdown-item" href="#" onclick="jump('modifyPassword')"><i class="fas fa-cog mr-2"></i>修改密码</a>
-                            <a class="dropdown-item" href="/logout"><i class="fas fa-power-off mr-2"></i>退出</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div>
+<!--顶部-->
+<div th:fragment="dashboardHeader" id="navbar" class="navbar navbar-default  ace-save-state">
+    <div class="navbar-container ace-save-state" id="navbar-container">
+        <button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar">
+        </button>
+        <!--头部左侧-->
+        <div class="navbar-header pull-left">
+            <a href="index.html" class="navbar-brand">
+                <small>
+                    <i class="fa fa-building"></i>
+                    Library
+                </small>
+            </a>
+        </div>
+        <!--头部右侧-->
+        <div class="navbar-buttons navbar-header pull-right" role="navigation">
+            <ul class="nav ace-nav">
+                <!--头部右第一个图标-->
+                <li class="grey dropdown-modal">
+                    <a data-toggle="dropdown" class="dropdown-toggle">
+                        <i class="ace-icon fa fa-tasks"></i>
+                    </a>
+                    <ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+                        <li class="dropdown-header">
+                            <i class="ace-icon fa fa-check"></i>
+                            4 Tasks to complete
+                        </li>
+                    </ul>
+                </li>
+                <!--头部右第二个图标-->
+                <li class="purple dropdown-modal">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <i class="ace-icon fa fa-bell icon-animated-bell"></i>
+                        <span class="badge badge-important">8</span>
+                    </a>
+
+                    <ul class="dropdown-menu-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close">
+                        <li class="dropdown-header">
+                            <i class="ace-icon fa fa-exclamation-triangle"></i>
+                            8 Notifications
+                        </li>
+
+                        <li class="dropdown-content">
+                            <ul class="dropdown-menu dropdown-navbar navbar-pink">
+                                <li>
+                                    <a href="#">
+                                        <div class="clearfix">
+													<span class="pull-left">
+														<i class="btn btn-xs no-hover btn-pink fa fa-comment"></i>
+														New Comments
+													</span>
+                                            <span class="pull-right badge badge-info">+12</span>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <i class="btn btn-xs btn-primary fa fa-user"></i>
+                                        Bob just signed up as an editor ...
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <div class="clearfix">
+													<span class="pull-left">
+														<i class="btn btn-xs no-hover btn-success fa fa-shopping-cart"></i>
+														New Orders
+													</span>
+                                            <span class="pull-right badge badge-success">+8</span>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <div class="clearfix">
+													<span class="pull-left">
+														<i class="btn btn-xs no-hover btn-info fa fa-twitter"></i>
+														Followers
+													</span>
+                                            <span class="pull-right badge badge-info">+11</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown-footer">
+                            <a href="#">
+                                See all notifications
+                                <i class="ace-icon fa fa-arrow-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <!--头部右第三个图标-->
+                <li class="green dropdown-modal">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <i class="ace-icon fa fa-envelope icon-animated-vertical"></i>
+                        <span class="badge badge-success">5</span>
+                    </a>
+
+                    <ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+                        <li class="dropdown-header">
+                            <i class="ace-icon fa fa-envelope-o"></i>
+                            5 Messages
+                        </li>
+
+                        <li class="dropdown-content">
+                            <ul class="dropdown-menu dropdown-navbar">
+                                <li>
+                                    <a href="#" class="clearfix">
+                                        <img src="/images/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar"/>
+                                        <span class="msg-body">
+													<span class="msg-title">
+														<span class="blue">Alex:</span>
+														Ciao sociis natoque penatibus et auctor ...
+													</span>
+
+													<span class="msg-time">
+														<i class="ace-icon fa fa-clock-o"></i>
+														<span>a moment ago</span>
+													</span>
+												</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="clearfix">
+                                        <img src="/images/avatars/avatar3.png" class="msg-photo" alt="Susan's Avatar"/>
+                                        <span class="msg-body">
+													<span class="msg-title">
+														<span class="blue">Susan:</span>
+														Vestibulum id ligula porta felis euismod ...
+													</span>
+
+													<span class="msg-time">
+														<i class="ace-icon fa fa-clock-o"></i>
+														<span>20 minutes ago</span>
+													</span>
+												</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="clearfix">
+                                        <img src="/images/avatars/avatar4.png" class="msg-photo" alt="Bob's Avatar"/>
+                                        <span class="msg-body">
+													<span class="msg-title">
+														<span class="blue">Bob:</span>
+														Nullam quis risus eget urna mollis ornare ...
+													</span>
+
+													<span class="msg-time">
+														<i class="ace-icon fa fa-clock-o"></i>
+														<span>3:15 pm</span>
+													</span>
+												</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="clearfix">
+                                        <img src="/images/avatars/avatar2.png" class="msg-photo" alt="Kate's Avatar"/>
+                                        <span class="msg-body">
+													<span class="msg-title">
+														<span class="blue">Kate:</span>
+														Ciao sociis natoque eget urna mollis ornare ...
+													</span>
+
+													<span class="msg-time">
+														<i class="ace-icon fa fa-clock-o"></i>
+														<span>1:33 pm</span>
+													</span>
+												</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="clearfix">
+                                        <img src="/images/avatars/avatar5.png" class="msg-photo" alt="Fred's Avatar"/>
+                                        <span class="msg-body">
+													<span class="msg-title">
+														<span class="blue">Fred:</span>
+														Vestibulum id penatibus et auctor  ...
+													</span>
+
+													<span class="msg-time">
+														<i class="ace-icon fa fa-clock-o"></i>
+														<span>10:09 am</span>
+													</span>
+												</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown-footer">
+                            <a href="inbox.html">
+                                See all messages
+                                <i class="ace-icon fa fa-arrow-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <!--头部右第四个图标（用户）-->
+                <li class="light-blue dropdown-modal">
+                    <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                        <img class="nav-user-photo" src="/images/avatars/user.jpg" alt="Jason's Photo"/>
+                        <span class="user-info">
+									<small>Welcome,</small>
+									<span th:text="${session.userName}"></span>
+								</span>
+
+                        <i class="ace-icon fa fa-caret-down"></i>
+                    </a>
+
+                    <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+                        <li>
+                            <a href="#">
+                                <i class="ace-icon fa fa-cog"></i>
+                                Settings
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="profile.html">
+                                <i class="ace-icon fa fa-user"></i>
+                                Profile
+                            </a>
+                        </li>
+
+                        <li class="divider"></li>
+
+                        <li>
+                            <a href="#">
+                                <i class="ace-icon fa fa-power-off"></i>
+                                Logout
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div><!-- /.navbar-container -->
 </div>
 
 <!-- 左边侧边栏 -->
-<div th:fragment = "navLeftSidebar">
-    <div th:replace="common/templates :: hiddenValue"></div>
-    <div class="nav-left-sidebar sidebar-dark">
-        <div class="menu-list">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="d-xl-none d-lg-none" href="#">菜单</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav flex-column">
-                        <li class="nav-divider">
-                            菜单
-                        </li>
-                        <li class="nav-item ssjc">
-                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-fw fa-chart-area"></i>实时监测 <span class="badge badge-success">6</span></a>
-                            <div id="submenu-1" class="collapse submenu" style="">
-                                <ul class="nav flex-column">
-                                    <li class="nav-item all">
-                                        <a class="nav-link" href="#" onclick="jump('currentChart ')">总览</a>
-                                    </li>
-                                    <li class="nav-item all">
-                                        <a class="nav-link" href="#" onclick="jump('instrumentState ')">设备状态总览</a>
-                                        <!-- <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-2" aria-controls="submenu-1-2">E-Commerce</a>
-                                         <div id="submenu-1-2" class="collapse submenu" style="">
-                                             <ul class="nav flex-column">
-                                                 <li class="nav-item">
-                                                     <a class="nav-link" href="index.html">E Commerce Dashboard</a>
-                                                 </li>
-                                                 <li class="nav-item">
-                                                     <a class="nav-link" href="ecommerce-product.html">Product List</a>
-                                                 </li>
-                                                 <li class="nav-item">
-                                                     <a class="nav-link" href="ecommerce-product-single.html">Product Single</a>
-                                                 </li>
-                                                 <li class="nav-item">
-                                                     <a class="nav-link" href="ecommerce-product-checkout.html">Product Checkout</a>
-                                                 </li>
-                                             </ul>
-                                         </div>-->
-                                    </li>
-                                    <li class="nav-item dvw">
-                                        <a class="nav-link" href="#" onclick="jump1('dvw','dvw_currentChart')" style="width: 257px;">应力应变</a>
-                                    </li>
-                                    <!--<li class="nav-item">
-                                        <a class="nav-link" href="dashboard-finance.html">Finance</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="dashboard-sales.html">Sales</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-1" aria-controls="submenu-1-1">Infulencer</a>
-                                        <div id="submenu-1-1" class="collapse submenu" style="">
-                                            <ul class="nav flex-column">
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="dashboard-influencer.html">Influencer</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="influencer-finder.html">Influencer Finder</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="influencer-profile.html">Influencer Profile</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>-->
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="nav-item jchf">
-                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2"><i class="fa fa-fw fa-history"></i>监测回放</a>
-                            <div id="submenu-2" class="collapse submenu" style="">
-                                <ul class="nav flex-column">
-                                    <li class="nav-item all">
-                                        <a class="nav-link" href="#" onclick="jump('historyChart')">总览 <!--<span class="badge badge-secondary">New</span>--></a>
-                                    </li>
-                                    <li class="nav-item all">
-                                        <a class="nav-link " href="#" onclick="jump1('dvw','dvw_historyChart')" style="width: 257px;">应力应变</a>
-                                    </li>
-                                    <!--<li class="nav-item">
-                                        <a class="nav-link" href="pages/general.html">General</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="pages/carousel.html">Carousel</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="pages/listgroup.html">List Group</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="pages/typography.html">Typography</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="pages/accordions.html">Accordions</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="pages/tabs.html">Tabs</a>
-                                    </li>-->
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="nav-item sjxz">
-                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i class="fas fa-fw fa-download"></i>数据下载</a>
-                            <div id="submenu-3" class="collapse submenu" style="">
-                                <ul class="nav flex-column">
-                                    <li class="nav-item all">
-                                        <a class="nav-link" href="#" onclick="jump('downloadFile')">总览</a>
-                                    </li>
-                                    <li class="nav-item all">
-                                        <a class="nav-link" href="#" onclick="jump1('dvw','dvw_download')" style="width: 257px;">应力应变</a>
-                                    </li>
-                                    <!--<li class="nav-item">
-                                        <a class="nav-link" href="pages/chart-chartist.html">Chartist Charts</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="pages/chart-charts.html">Chart</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="pages/chart-morris.html">Morris</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="pages/chart-sparkline.html">Sparkline</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="pages/chart-gauge.html">Guage</a>
-                                    </li>-->
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="nav-item " id="config">
-                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i class="fa fa-fw fa-cog"></i>配置设备</a>
-                            <div id="submenu-4" class="collapse submenu" style="">
-                                <ul class="nav flex-column">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#" onclick="jump('instrumentConfig')">配置通道</a>
-                                    </li>
-                                    <!--<li class="nav-item">
-                                        <a class="nav-link" href="pages/multiselect.html">Multiselect</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="pages/datepicker.html">Date Picker</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="pages/bootstrap-select.html">Bootstrap Select</a>
-                                    </li>-->
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="nav-item yhsz">
-                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-5" aria-controls="submenu-5"><i class="fas fa-fw fa-users"></i>用户设置</a>
-                            <div id="submenu-5" class="collapse submenu" style="">
-                                <ul class="nav flex-column">
-                                    <li class="nav-item" id="userManager">
-                                        <a class="nav-link" href="#" onclick="jump('userInfoManager')">用户管理</a>
-                                    </li>
-                                    <!--<li class="nav-item">
-                                        <a class="nav-link" href="#" onclick="jump('modifyPassword')">修改密码</a>
-                                    </li>-->
-                                </ul>
-                            </div>
-                        </li>
-                        <!--<li class="nav-divider">
-                            Features
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-6" aria-controls="submenu-6"><i class="fas fa-fw fa-file"></i> Pages </a>
-                            <div id="submenu-6" class="collapse submenu" style="">
-                                <ul class="nav flex-column">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="pages/blank-page.html">Blank Page</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="pages/blank-page-header.html">Blank Page Header</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="pages/login.html">Login</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="pages/404-page.html">404 page</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="pages/sign-up.html">Sign up Page</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="pages/forgot-password.html">Forgot Password</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="pages/pricing.html">Pricing Tables</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="pages/timeline.html">Timeline</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="pages/calendar.html">Calendar</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="pages/sortable-nestable-lists.html">Sortable/Nestable List</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="pages/widgets.html">Widgets</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="pages/media-object.html">Media Objects</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="pages/cropper-image.html">Cropper</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="pages/color-picker.html">Color Picker</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-7" aria-controls="submenu-7"><i class="fas fa-fw fa-inbox"></i>Apps <span class="badge badge-secondary">New</span></a>
-                            <div id="submenu-7" class="collapse submenu" style="">
-                                <ul class="nav flex-column">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="pages/inbox.html">Inbox</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="pages/email-details.html">Email Detail</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="pages/email-compose.html">Email Compose</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="pages/message-chat.html">Message Chat</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-8" aria-controls="submenu-8"><i class="fas fa-fw fa-columns"></i>Icons</a>
-                            <div id="submenu-8" class="collapse submenu" style="">
-                                <ul class="nav flex-column">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="pages/icon-fontawesome.html">FontAwesome Icons</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="pages/icon-material.html">Material Icons</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="pages/icon-simple-lineicon.html">Simpleline Icon</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="pages/icon-themify.html">Themify Icon</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="pages/icon-flag.html">Flag Icons</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="pages/icon-weather.html">Weather Icon</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-9" aria-controls="submenu-9"><i class="fas fa-fw fa-map-marker-alt"></i>Maps</a>
-                            <div id="submenu-9" class="collapse submenu" style="">
-                                <ul class="nav flex-column">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="pages/map-google.html">Google Maps</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="pages/map-vector.html">Vector Maps</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-10" aria-controls="submenu-10"><i class="fas fa-f fa-folder"></i>Menu Level</a>
-                            <div id="submenu-10" class="collapse submenu" style="">
-                                <ul class="nav flex-column">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Level 1</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-11" aria-controls="submenu-11">Level 2</a>
-                                        <div id="submenu-11" class="collapse submenu" style="">
-                                            <ul class="nav flex-column">
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="#">Level 1</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="#">Level 2</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Level 3</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>-->
-                    </ul>
-                </div>
-            </nav>
+<div th:fragment="navLeftSidebar" id="sidebar" class="sidebar  responsive   ace-save-state">
+    <div class="sidebar-shortcuts" id="sidebar-shortcuts">
+        <!--左侧菜单顶部四个-->
+        <div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
+            <button class="btn btn-success">
+                <i class="ace-icon fa fa-signal"></i>
+            </button>
+
+            <button class="btn btn-info">
+                <i class="ace-icon fa fa-pencil"></i>
+            </button>
+
+            <button class="btn btn-warning">
+                <i class="ace-icon fa fa-users"></i>
+            </button>
+
+            <button class="btn btn-danger">
+                <i class="ace-icon fa fa-cogs"></i>
+            </button>
         </div>
-    </div>
+
+    </div><!-- /.sidebar-shortcuts -->
+
+    <!--左侧目录-->
+    <ul class="nav nav-list">
+
+        <!--首页-->
+        <li class="active">
+            <a href="index.html">
+                <i class="menu-icon fa fa-google-wallet"></i>
+                <span class="menu-text"> 首页 </span>
+            </a>
+        </li>
+        <!--图书信息管理-->
+        <li class="">
+            <!--一级目录-->
+            <a href="#" class="dropdown-toggle">
+                <i class="menu-icon fa fa-desktop"></i>
+                <span class="menu-text">图书信息管理</span>
+                <b class="arrow fa fa-angle-down"></b>
+            </a>
+
+            <b class="arrow"></b>
+
+            <ul class="submenu">
+
+                <li class="">
+                    <a href="typography.html">
+                        <i class="menu-icon fa fa-caret-right"></i>
+                        书籍信息管理
+                    </a>
+
+                    <b class="arrow"></b>
+                </li>
+
+                <li class="">
+                    <a href="elements.html">
+                        <i class="menu-icon fa fa-caret-right"></i>
+                        新书上架
+                    </a>
+                    <b class="arrow"></b>
+                </li>
+
+                <li class="">
+                    <a href="buttons.html">
+                        <i class="menu-icon fa fa-caret-right"></i>
+                        旧书下架
+                    </a>
+                    <b class="arrow"></b>
+                </li>
+
+            </ul>
+        </li>
+        <!--读者信息管理-->
+        <li class="">
+            <a href="#" class="dropdown-toggle">
+                <i class="menu-icon fa fa-list"></i>
+                <span class="menu-text"> 读者信息管理 </span>
+                <b class="arrow fa fa-angle-down"></b>
+            </a>
+            <b class="arrow"></b>
+
+            <ul class="submenu">
+
+                <li class="">
+                    <a href="tables.html">
+                        <i class="menu-icon fa fa-caret-right"></i>
+                        读者信息管理
+                    </a>
+                    <b class="arrow"></b>
+                </li>
+
+            </ul>
+        </li>
+        <!--借阅信息管理-->
+        <li class="">
+            <a href="#" class="dropdown-toggle">
+                <i class="menu-icon fa fa-pencil-square-o"></i>
+                <span class="menu-text"> 借阅信息管理 </span>
+                <b class="arrow fa fa-angle-down"></b>
+            </a>
+            <b class="arrow"></b>
+
+            <ul class="submenu">
+                <li class="">
+                    <a href="form-elements.html">
+                        <i class="menu-icon fa fa-caret-right"></i>
+                        图书出借
+                    </a>
+                    <b class="arrow"></b>
+                </li>
+
+                <li class="">
+                    <a href="form-elements-2.html">
+                        <i class="menu-icon fa fa-caret-right"></i>
+                        图书返还
+                    </a>
+                    <b class="arrow"></b>
+                </li>
+
+            </ul>
+        </li>
+        <!--系统管理-->
+        <li class="">
+            <a href="#" class="dropdown-toggle">
+                <i class="menu-icon fa fa-gear "></i>
+                <span class="menu-text"> 系统管理 </span>
+                <b class="arrow fa fa-angle-down"></b>
+            </a>
+            <b class="arrow"></b>
+
+            <ul class="submenu">
+                <li class="">
+                    <a href="form-elements.html">
+                        <i class="menu-icon fa fa-caret-right"></i>
+                        用户查询
+                    </a>
+                    <b class="arrow"></b>
+                </li>
+
+                <li class="">
+                    <a href="#" onclick="jumpHtml1('User','addUser')">
+                        <i class="menu-icon fa fa-caret-right"></i>
+                        用户添加
+                    </a>
+                    <b class="arrow"></b>
+                </li>
+
+            </ul>
+        </li>
+    </ul><!-- /.nav-list -->
 </div>
 
-<!-- 隐藏属性值 -->
-<div th:fragment = "hiddenValue">
-    <input id="userName" type="hidden" th:value="${session.userName}" />
-    <input id="userType" type="hidden" th:value="${session.userType}" />
+
+<!-- 底部 -->
+<div th:fragment="footer" class="footer">
+    <div class="footer-inner">
+        <div class="footer-content">
+						<span class="bigger-120">
+							<span class="blue bolder">Library</span>
+							System&copy; 2020-2021
+						</span>
+        </div>
+    </div>
+    <!-- 隐藏属性值 -->
+    <div>
+        <input id="UN" type="hidden" th:value="${session.userName}"/>
+        <input id="UT" type="hidden" th:value="${session.userType}"/>
+        <input id="SU" type="hidden" th:value="${session.sessionUser}"/>
+    </div>
 </div>

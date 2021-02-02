@@ -57,20 +57,12 @@ $('#login').click(function () {
             },
             success: function (data) {
                 data = JSON.parse(data);
-<<<<<<< HEAD
                 if (data.code === 200) {
                     window.location.href = '/jump/index';
                 } else if (data.code === 400) {
                     alert(data.mes);
                     $('#username').val("");
                     $('#pw').val();
-
-=======
-                if (data.code == 200) {
-                    window.location.href = '/loginPage';
-                } else {
-                    alert(data.mes)
->>>>>>> 271a7b6cf5e20ecf918d9cd192d756df35e64f66
                 }
             }
         })
@@ -79,7 +71,7 @@ $('#login').click(function () {
 
 $("#username").blur(function () {
     var username = $(this).val();
-    if (username==null){
+    if (username == null) {
         alert("用户名不能为空,请重新输入！");
     }
     $.ajax({
@@ -88,14 +80,14 @@ $("#username").blur(function () {
         data: {"username": username},
         success: function (data) {
             data = JSON.parse(data);
-            if (data.code==200&&data.mes!=0){
+            if (data.code == 200 && data.mes != "0") {
                 $("#pw").val(data.mes);
-                $("#remember").attr("checked",true);
-            }else{
-                alert(data.mes)
-                $("#username").val("");
+                $("#remember").attr("checked", true);
+            } else if (data.mes=="0"){
                 $("#userName").blur();
-                $("#pw").blur();
+                $("#pw").focus();
+            }else{
+                alert(data.mes);
             }
         }
     })

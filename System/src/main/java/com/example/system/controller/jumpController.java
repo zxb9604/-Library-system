@@ -23,4 +23,14 @@ public class jumpController {
         return "index";
     }
 
+    @GetMapping("/jump/{path1}/{path2}")
+    public String jumpHtml1(@PathVariable String path1, @PathVariable String path2,HttpSession session) {
+        if(session.getAttribute("userName")==null){
+            return "login";
+        }
+        if (!StringUtils.isEmpty(path1) && !StringUtils.isEmpty(path2)){
+            return path1+"/"+path2;
+        }
+        return "index";
+    }
 }
