@@ -10,7 +10,7 @@ import org.thymeleaf.util.StringUtils;
 import javax.servlet.http.HttpSession;
 
 @Controller
-public class jumpController {
+public class JumpController {
 
     @GetMapping("/jump/{path}")
     public String jumpHtml(@PathVariable String path, HttpSession session) {

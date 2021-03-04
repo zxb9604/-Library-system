@@ -5,9 +5,9 @@ $('#register').click(function () {
     var email = $('#email').val();
     var repassWord = $('#Repassword').val();
 
-    if (userName == null) {
+    if (userName == "") {
         alert("用户名不能为空,请重新输入！")
-    } else if (passWord == null) {
+    } else if (passWord == "") {
         alert("密码不能为空,请重新输入！")
     } else if (repassWord == passWord) {
         $.ajax({
@@ -42,9 +42,9 @@ $('#login').click(function () {
     } else {
         status = "0";
     }
-    if (userName == null) {
+    if (userName == "") {
         alert("用户名不能为空,请重新输入！")
-    } else if (passWord == null) {
+    } else if (passWord == "") {
         alert("密码不能为空,请重新输入！")
     } else {
         $.ajax({
@@ -71,25 +71,25 @@ $('#login').click(function () {
 
 $("#username").blur(function () {
     var username = $(this).val();
-    if (username == null) {
-        alert("用户名不能为空,请重新输入！");
-    }
-    $.ajax({
-        url: "/checkUsername",
-        type: "post",
-        data: {"username": username},
-        success: function (data) {
-            data = JSON.parse(data);
-            if (data.code == 200 && data.mes != "0") {
-                $("#pw").val(data.mes);
-                $("#remember").attr("checked", true);
-            } else if (data.mes=="0"){
-                $("#userName").blur();
-                $("#pw").focus();
-            }else{
-                alert(data.mes);
+    if (username != "") {
+        $.ajax({
+            url: "/checkUsername",
+            type: "post",
+            data: {"username": username},
+            success: function (data) {
+                data = JSON.parse(data);
+                if (data.code == 200 && data.mes != "0") {
+                    $("#pw").val(data.mes);
+                    $("#remember").attr("checked", true);
+                } else if (data.mes == "0") {
+                    $("#userName").blur();
+                    $("#pw").focus();
+                } else {
+                    alert(data.mes);
+                }
             }
-        }
-    })
-})
+        })
+    }
+});
+
 

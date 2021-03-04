@@ -1,6 +1,8 @@
-com\example\system\controller\loginController.class
+com\example\system\util\downLoadUtil.class
+com\example\system\entity\StudentEntity.class
 com\example\system\entity\UserEntity.class
 com\example\system\dao\UserDao.class
 com\example\system\controller\jumpController.class
 com\example\system\SystemApplication.class
+com\example\system\controller\loginController.class
 com\example\system\util\ResMesUtil.class

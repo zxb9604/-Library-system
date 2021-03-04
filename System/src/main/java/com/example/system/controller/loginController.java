@@ -19,8 +19,8 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 @Controller
-public class loginController {
-    private final static Logger logger = LoggerFactory.getLogger(loginController.class);
+public class LoginController {
+    private final static Logger logger = LoggerFactory.getLogger(LoginController.class);
     @Autowired
     UserDao userDao;
 

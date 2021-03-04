@@ -13,12 +13,141 @@
     <div th:replace="common/templates :: navLeftSidebar"></div>
     <!--主体-->
     <div class="main-content">
+        <div class="main-content-inner">
+        <div class="page-content">
+            <div class="page-header">
+                <h1>
+                    系统管理
+                    <small>
+                        <i class="ace-icon fa fa-angle-double-right"></i>
+                        用户添加
+                    </small>
+                </h1>
+            </div><!-- /.page-header -->
+            <div class="row">
+                <div>
+                    <span th:class="text-danger" th:align="left"><h4>批量导入时请先下载模板!</h4></span>
+                    &nbsp; &nbsp; &nbsp;
+                    <button th:id="grtj" class="btn btn-info" type="button">
+                        <i class="ace-icon fa   bigger-110"></i>
+                        个人添加
+                    </button>
+                    &nbsp; &nbsp; &nbsp;
+                    <a th:id="mbxz" class="btn btn-info" type="button" href="/down/xsdr.xlsx">
+                        <i class="ace-icon fa fa-level-down  bigger-110"></i>
+                        模板下载
+                    </a>
+                    &nbsp; &nbsp; &nbsp;
+                    <button th:id="pldr" class="btn btn-info" type="button">
+                        <i class="ace-icon fa fa-level-up  bigger-110"></i>
+                        批量导入
+                    </button>
+                </div>
+                <div class="col-xs-12" th:id="myForm" th:hidden="true">
+                    <form class="form-horizontal" role="form">
 
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="username">姓名
+                                 </label>
+
+                            <div class="col-sm-9">
+                                <input type="text" id="username" placeholder="Username" autocomplete="off" autofocus="autofocus" class="col-xs-10 col-sm-5"/>
+                                <span th:class="text-danger" th:hidden="true" th:id="checkname">姓名已存在!</span>
+                            </div>
+                        </div>
+                        <div class="space-4"></div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right">密码</label>
+
+                            <div class="col-sm-9">
+                                <input type="password" id="password" placeholder="Password" class="col-xs-10 col-sm-5"/>
+                            </div>
+                        </div>
+                        <div class="space-4"></div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right"> 学院 </label>
+
+                            <div class="col-sm-9">
+                                <select class="chosen-select col-xs-10 col-sm-5" id="college" placeholder="College">
+                                    <option value="">  </option>
+                                    <option value="电子信息工程系">电子信息工程系</option>
+                                    <option value="会计系">会计系</option>
+                                    <option value="外语系">外语系</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="space-4"></div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right"> 专业 </label>
+
+                            <div class="col-sm-9">
+                                <select class="chosen-select col-xs-10 col-sm-5" id="major" placeholder="College">
+                                    <option value="">  </option>
+                                    <option value="计算机科学与技术">计算机科学与技术</option>
+                                    <option value="电气及其自动化">电气及其自动化</option>
+                                    <option value="审计">审计</option>
+                                    <option value="会计">会计</option>
+                                    <option value="英语">英语</option>
+                                    <option value="日语">日语</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="space-4"></div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right">入学时间</label>
+
+                            <div class="col-sm-9">
+                                <input id="rxsj" type="date" class="col-xs-10 col-sm-5" />
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right">联系电话</label>
+
+                            <div class="col-sm-9">
+                                <input type="text" id="phone" placeholder="Telephone number" autocomplete="off" class="col-xs-10 col-sm-5"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right">邮箱地址</label>
+
+                            <div class="col-sm-9">
+                                <input type="text" id="email" placeholder="Email" class="col-xs-10 col-sm-5"/>
+                            </div>
+                        </div>
+
+                        <div class="space-4"></div>
+
+                        <div class="clearfix form-actions">
+                            <div class="col-md-offset-3 col-md-9">
+                                <button id="tj" class="btn btn-info" type="button">
+                                    <i class="ace-icon fa fa-check bigger-110"></i>
+                                    提交
+                                </button>
+                                &nbsp; &nbsp; &nbsp;
+                                <button class="btn" type="reset">
+                                    <i class="ace-icon fa fa-undo bigger-110"></i>
+                                    重置
+                                </button>
+                            </div>
+                        </div>
+                        <div class="hr hr-24"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 </div><!-- /.main-content -->
 <!--foot-->
 <div th:replace="common/templates::footer">
 </div><!-- /.main-container -->
-
+    <script type="text/javascript" th:src="@{/js/addUser.js}"></script>
 </body>
 </html>

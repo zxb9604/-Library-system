@@ -1,6 +1,6 @@
 package com.example.system.util;
 
-import com.google.gson.Gson;
+import com.alibaba.fastjson.JSONObject;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.HashMap;
@@ -35,7 +35,7 @@ public class ResMesUtil extends HashMap<Object,Object> {
     private String resMes(String mes, int code) {
         this.put("mes", mes);
         this.put("code", code);
-        return  new Gson().toJson(this);
+        return  JSONObject.toJSONString(this);
     }
 
     public static ResMesUtil build() {

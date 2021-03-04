@@ -1,6 +1,9 @@
 D:\GitHub\Library-system\System\src\main\java\com\example\system\controller\jumpController.java
 D:\GitHub\Library-system\System\src\main\java\com\example\system\SystemApplication.java
+D:\GitHub\Library-system\System\src\main\java\com\example\system\dao\StudentDao.java
 D:\GitHub\Library-system\System\src\main\java\com\example\system\controller\loginController.java
 D:\GitHub\Library-system\System\src\main\java\com\example\system\dao\UserDao.java
+D:\GitHub\Library-system\System\src\main\java\com\example\system\entity\StudentEntity.java
+D:\GitHub\Library-system\System\src\main\java\com\example\system\controller\addController.java
 D:\GitHub\Library-system\System\src\main\java\com\example\system\util\ResMesUtil.java
 D:\GitHub\Library-system\System\src\main\java\com\example\system\entity\UserEntity.java
