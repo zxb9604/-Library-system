@@ -88,8 +88,7 @@ $('#pldr').click(function () {
     inputObj.click(function () {
         $.ajax({
             url:"/xsImportExcel",
-            type:"get",
-            data:
+            type:"get"
         });
     });
 })
